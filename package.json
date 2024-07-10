@@ -1,7 +1,7 @@
 {
-  "name": "weston",
+  "name": "nodebasics",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,9 +10,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "cookie-parser": "^1.4.6",
-    "express": "^4.15.2",
+    "express": "^4.19.2",
     "pug": "^3.0.3"
   }
 }
