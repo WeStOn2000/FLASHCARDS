@@ -2,7 +2,8 @@ extends layout.pug
 
 block content
    section#content
-     h3= prompt
+     h3= text
       if hint
        p
         i hint: #{hint}  
+      a(href=`${id}?side=${sideToShow}`)= sideToShowDisplay
