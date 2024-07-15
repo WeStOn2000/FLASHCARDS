@@ -6,6 +6,7 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false}));
 app.set('view engine', 'pug');
 app.use(cookieParser());
+app.use('/static',express.static('public'));
 
  const  mainRoutes = require('./routes');
  const cardRoutes = require('./routes/cards');
@@ -21,7 +22,7 @@ app.use((req,res,next) => {
 
 app.use((err,req,res,next) => {
     res.locals.error = err;
-    res.status(err.status);
+    res.status(err.status || 500);
     res.render("error");
 });
 
